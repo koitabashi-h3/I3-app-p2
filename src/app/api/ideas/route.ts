@@ -77,7 +77,7 @@ export async function POST(req: Request) {
 
   const ideas = Array.isArray(parsed.ideas) ? parsed.ideas : [];
   // id を付与して返す
-  const ideasWithId = ideas.map(idea => ({
+  const ideasWithId = ideas.map((idea: any) => ({
     id: uuid(),
     title: idea.title,
     description: idea.description,
